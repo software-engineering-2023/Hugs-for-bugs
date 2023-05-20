@@ -110,7 +110,7 @@ const MainView = () => {
 
       <div className='position-absolute' style={{ left: "300px", top: "520px " }}>
         <text style={{ color: '#0B0B61', fontSize: "3rem", fontWeight: "bold" }}>
-           +$30M</text>
+           +$40M</text>
       </div>
       <div className='position-absolute' style={{ left: "300px", top: "590px " }}>
         <text style={{ color: '#0B173B', fontSize: "1rem" }}>
