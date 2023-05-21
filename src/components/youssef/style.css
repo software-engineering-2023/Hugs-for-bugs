@@ -10,14 +10,17 @@
 
 
 header {
-    background-color: #f0f0f0;
+    background-color: #0B173B;
+
     width: 100%;
     position: fixed;
     z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 200px ;
+    padding: 10px 100px ;
+    height: 80px
+
 }
 
 .logo{
@@ -29,7 +32,7 @@ header {
 }
 
 .navigation a{
-    color: #3a6cf4;
+    color: #FFF;
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500;
