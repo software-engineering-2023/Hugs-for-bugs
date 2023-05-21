@@ -1,7 +1,9 @@
 import React from 'react'
 import './style.css'
+import { useLocation } from 'react-router-dom';
+
 const Credit_Card = () => {
-  let  myLink = document.querySelector('a[href="#"]');
+  let myLink = document.querySelector('a[href="#"]');
   myLink.addEventListener("click", function (e) {
     e.preventDefault()
   })
@@ -84,6 +86,7 @@ const Credit_Card = () => {
   }
 
   return (
+
     <body className="snippet-body">
       <div class="container-fluid px-1 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
@@ -102,7 +105,7 @@ const Credit_Card = () => {
                       id="fname"
                       name="fname"
                       placeholder="Enter your first name"
-                      onblur={()=>validate(1)}
+                      onblur={() => validate(1)}
                     />
                   </div>
                   <div class="form-group col-sm-6 flex-column d-flex">
@@ -114,7 +117,7 @@ const Credit_Card = () => {
                       id="lname"
                       name="lname"
                       placeholder="Enter your last name"
-                      onblur={()=>validate(2)}
+                      onblur={() => validate(2)}
                     />
                   </div>
                 </div>
@@ -128,7 +131,7 @@ const Credit_Card = () => {
                       id="email"
                       name="email"
                       placeholder=""
-                      onblur={()=>validate(3)}
+                      onblur={() => validate(3)}
                     />
                   </div>
                   <div class="form-group col-sm-6 flex-column d-flex">
@@ -142,7 +145,7 @@ const Credit_Card = () => {
                       id="mob"
                       name="mob"
                       placeholder=""
-                      onblur={()=>validate(4)}
+                      onblur={() => validate(4)}
                     />
                   </div>
                 </div>
@@ -156,7 +159,7 @@ const Credit_Card = () => {
                       id="job"
                       name="job"
                       placeholder=""
-                      onblur={()=>validate(5)}
+                      onblur={() => validate(5)}
                     />
                   </div>
                   <div class="form-group col-sm-6 flex-column d-flex">
@@ -168,7 +171,7 @@ const Credit_Card = () => {
                       id="mob"
                       name="mob"
                       placeholder=""
-                      onblur={()=>validate(4)}
+                      onblur={() => validate(4)}
                     />
                   </div>
                 </div>
@@ -184,7 +187,7 @@ const Credit_Card = () => {
                       id="ans"
                       name="ans"
                       placeholder=""
-                      onblur={()=>validate(6)}
+                      onblur={() => validate(6)}
                     />
                   </div>
                 </div>
@@ -224,11 +227,11 @@ const Credit_Card = () => {
         }
       </script>
       <script type="text/javascript">{
- 
+
 
       }
-   
-    
+
+
       </script>
     </body>
 
