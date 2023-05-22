@@ -7,6 +7,18 @@
     <title>Credit Card</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+ #firstbutton {
+            color: blue;
+        }
+        #secondbutton {
+            color: blue;
+        }
+        
+.hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,6 +40,9 @@
                 <div class="info">
                     <h3>Customer 1</h3>
                     <p>My credit card was stolen and I want to deactivate it</p>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="firstbutton" class="hidden">Your credit card is deactivated   </span>
+
                     <button id="credit card">Handle</button>
                 </div>
             </div>
@@ -39,6 +54,9 @@
                 <div class="info">
                     <h3>Customer 2</h3>
                     <p>My credit card was lost , and I want to apply for replacement</p>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="secondbutton" class="hidden">The issue is handled successfully   </span>
+
                     <button id="transactions">Handle</button>
 
                 </div>
@@ -48,6 +66,16 @@
         </div>
     </section>
 
+    <script>
+        document.getElementById("credit card").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("firstbutton").style.display = "inline";
+        });
+        document.getElementById("transactions").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("secondbutton").style.display = "inline";
+        });
+    </script>
 
 </body>
 </html>

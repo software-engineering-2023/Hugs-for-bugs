@@ -7,6 +7,21 @@
     <title>System</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        #first  {
+          color: blue;
+      }
+      #second  {
+          color: blue;
+      }
+      #third  {
+          color: blue;
+      }
+      
+      .hidden {
+          display: none;
+      }
+  </style>
 </head>
 <body>
     <header>
@@ -28,7 +43,10 @@
                 <div class="info">
                     <h3>Network failure </h3>
                     <p>The system crashed due to loss of connectivity</p>
-                    <button id="credit card">Handle</button>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="first" class="hidden">The connectivity was restored </span>
+
+                    <button id="firstbutton">Handle</button>
                 </div>
             </div>
             <div class="card">
@@ -39,7 +57,10 @@
                 <div class="info">
                     <h3>Data loss </h3>
                     <p>The system crashed due to some loss of data   </p>
-                    <button id="transactions">Handle</button>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="second" class="hidden">The data was recovered</span>
+
+                    <button id="secondbutton">Handle</button>
 
                 </div>
             </div>
@@ -51,7 +72,10 @@
                 <div class="info">
                     <h3>Software bug</h3>
                     <p>The system crashed due to a software bug  </p>
-                    <button id="transactions">Handle</button>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="third" class="hidden">The bug was resolved </span>
+
+                    <button id="thirdbutton">Handle</button>
 
                 </div>
             </div>
@@ -59,7 +83,20 @@
             </div>
         </div>
     </section>
-
+    <script>
+        document.getElementById("firstbutton").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("first").style.display = "inline";
+        });
+        document.getElementById("secondbutton").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("second").style.display = "inline";
+        });
+        document.getElementById("thirdbutton").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("third").style.display = "inline";
+        });
+    </script>
 
 </body>
 </html>

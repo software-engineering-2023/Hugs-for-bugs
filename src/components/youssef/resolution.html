@@ -7,6 +7,21 @@
     <title>Resolution</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        #first  {
+          color: blue;
+      }
+      #second  {
+          color: blue;
+      }
+      #third  {
+          color: blue;
+      }
+      
+      .hidden {
+          display: none;
+      }
+  </style>
 </head>
 <body>
     <header>
@@ -28,7 +43,10 @@
                 <div class="info">
                     <h3>Credit Card Issues </h3>
                     <p>Notifying clients of effective management of credit card concerns</p>
-                    <button id="credit card">Notify</button>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="first" class="hidden">Customers with these issues were notified successfully </span>
+
+                    <button id="firstbutton">Notify</button>
                 </div>
             </div>
             <div class="card">
@@ -39,7 +57,9 @@
                 <div class="info">
                     <h3>Transaction Failure</h3>
                     <p>Notifying clients of effective management of the unsuccessful transactions  </p>
-                    <button id="transactions">Notify</button>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="second" class="hidden">Customers with these issues were notified successfully</span>
+                    <button id="secondbutton">Notify</button>
 
                 </div>
             </div>
@@ -51,7 +71,10 @@
                 <div class="info">
                     <h3>System Failure</h3>
                     <p>notifying clients of effective management of the system failure</p>
-                    <button id="transactions">Notify</button>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="third" class="hidden">Customers with these issues were notified successfully </span>
+
+                    <button id="thirdbutton">Notify</button>
 
                 </div>
             </div>
@@ -59,7 +82,20 @@
             </div>
         </div>
     </section>
-
+    <script>
+        document.getElementById("firstbutton").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("first").style.display = "inline";
+        });
+        document.getElementById("secondbutton").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("second").style.display = "inline";
+        });
+        document.getElementById("thirdbutton").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("third").style.display = "inline";
+        });
+    </script>
 
 </body>
 </html>

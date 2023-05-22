@@ -7,6 +7,18 @@
     <title>Transaction</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        #first  {
+          color: blue;
+      }
+      #second  {
+          color: blue;
+      }
+      
+      .hidden {
+          display: none;
+      }
+  </style>
 </head>
 <body>
     <header>
@@ -28,7 +40,10 @@
                 <div class="info">
                     <h3>Transaction  1</h3>
                     <p>The transaction failed due to incorrect payment details</p>
-                    <button id="credit card">Handle</button>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="first" class="hidden">Enter the transaction's details again</span>
+
+                    <button id="firstbutton">Handle</button>
                 </div>
             </div>
             <div class="card">
@@ -38,8 +53,12 @@
                 </div>
                 <div class="info">
                     <h3>Transaction 2</h3>
+                
                     <p>The transaction failed due to technical issues </p>
-                    <button id="transactions">Handle</button>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="second" class="hidden">The techincal issues are resolved </span>
+
+                    <button id="secondbutton">Handle</button>
 
                 </div>
             </div>
@@ -47,7 +66,16 @@
             </div>
         </div>
     </section>
-
+    <script>
+        document.getElementById("firstbutton").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("first").style.display = "inline";
+        });
+        document.getElementById("secondbutton").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("second").style.display = "inline";
+        });
+    </script>
 
 </body>
 </html>

@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+          #notification {
+            color: blue;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
     <title>Admin Page</title>
 </head>
 <body>
@@ -82,7 +90,7 @@
                     <h3>issue resolution</h3>
                     <p>Notify the customers that their reported problems are resolved successfully </p>
                 <a href="resolution.html">
-                    <button id="resolution">Handle</button>
+                    <button id="resolution">Notify</button>
                 </a>
                 </div>
             </div>
@@ -93,6 +101,8 @@
                 <div class="info">
                     <h3>bank announcements</h3>
                     <p>Notify the customers with the new bank announcements</p>
+                    <div style="margin-bottom: 20px;"></div>
+                    <span id="notification" class="hidden">All the bank customers were notified successfully</span>
 
                     <button id="announcements"> Notify All Customers</button>
                 </div>
@@ -102,7 +112,12 @@
         </div>
     </section>
 
-
+    <script>
+        document.getElementById("announcements").addEventListener("click", function() {
+            this.style.display = "none";
+            document.getElementById("notification").style.display = "inline";
+        });
+    </script>
 
 </body>
 </html>
