@@ -1,11 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import MainView from './components/MainView';
-
+import React from 'react';
+import MainView from './components/ramez/MainView';
 function App() {
   return (
-   <MainView/>
-  );
+    <MainView/>
+   );
 }
 
 export default App;
