@@ -4,9 +4,9 @@ const Navigation = ({ setView }) => {
     return (
         <div>  <button type="button" class="btn btn-light position-absolute"
             style={{ top: "20px", right: "30px" }}
-        >Login</button>
+            onClick={() => setView("Login")} >Login</button>
             <button type="button" class="btn btn-outline-light position-absolute"
-                style={{ top: "20px", right: "110px" }}>Sign Up</button>
+            onClick={()=>setView("SignUp")}    style={{ top: "20px", right: "110px" }}>Sign Up</button>
 
 
             <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "510px" }}>
@@ -69,7 +69,7 @@ const Navigation = ({ setView }) => {
 
 
             <text class="position-absolute text-lg" style={{ color: 'white', top: "28px", right: "230px", fontSize: "1rem", font: "bold" }}
-            onClick={()=>setView("BeginView")}
+                onClick={() => setView("BeginView")}
             >
                 Home</text>
 
