@@ -12,7 +12,7 @@
     <style type="text/css">
       body {
         margin-top: 20px;
-        background: #79e0ee;
+        background: #accdea;
       }
 
       .card {
@@ -60,7 +60,7 @@
           <div class="position-relative card table-nowrap table-card">
             <div class="card-header align-items-center">
               <h5 class="mb-0">Latest Transactions</h5>
-              <p class="mb-0 small text-muted">3 Pending</p>
+              <p class="mb-0 small text-muted">2 Pending</p>
             </div>
             <div class="table-responsive">
               <table class="table mb-0">
@@ -68,7 +68,9 @@
                   <tr>
                     <th>Transaction ID</th>
                     <th>Date</th>
-                    <th>Name/Company</th>
+                    <th>Credit Card Number</th>
+
+                    <th>Company</th>
                     <th>type</th>
                     <th>Amount</th>
                     <th>Status</th>
@@ -76,24 +78,28 @@
                 </thead>
                 <style>
                   .send {
-                    color: rgb(82, 239, 122); /* Set the desired color here */
+                    color: rgb(245, 80, 80); /* Set the desired color here */
                   }
                   .receive {
-                    color: rgb(245, 80, 80); /* Set the desired color here */
+                    color: rgb(82, 239, 122); /* Set the desired color here */
                   }
                 </style>
                 <tbody>
                   <tr class="align-middle">
-                    <td>#57473829</td>
-                    <td>13 Sep, 2022</td>
-                    <td>Electricity Company</td>
-                    <td>Sending / Electricity bill</td>
+                    <td>#96373829</td>
+                    <td>17 Oct, 2022</td>
+                    <td>1</td>
+                    <td>Zara</td>
+                    <td>Sending</td>
                     <td>
                       <div class="d-flex align-items-center">
                         <span
-                          ><i class="fa fa-arrow-up send" aria-hidden="true"></i
+                          ><i
+                            class="fa fa-arrow-down send"
+                            aria-hidden="true"
+                          ></i
                         ></span>
-                        <span>$145</span>
+                        <span>$250</span>
                       </div>
                     </td>
                     <td>
@@ -104,19 +110,20 @@
                     </td>
                   </tr>
                   <tr class="align-middle">
-                    <td>#012458780</td>
-                    <td>19 Aug, 2022</td>
-                    <td>Ramez Nashat</td>
-                    <td>Receiving / Personal account</td>
+                    <td>#38299637</td>
+                    <td>24 Feb, 2020</td>
+                    <td>3</td>
+                    <td>H&M</td>
+                    <td>Sending</td>
                     <td>
                       <div class="d-flex align-items-center">
                         <span
                           ><i
-                            class="fa fa-arrow-down receive"
+                            class="fa fa-arrow-down send"
                             aria-hidden="true"
                           ></i
                         ></span>
-                        <span>$641.64</span>
+                        <span>$185</span>
                       </div>
                     </td>
                     <td>
@@ -128,79 +135,20 @@
                   </tr>
 
                   <tr class="align-middle">
-                    <td>#76444326</td>
-                    <td>03 April, 2023</td>
-                    <td>National Bank of Egypt</td>
-                    <td>Sending / Loan installment</td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span
-                          ><i class="fa fa-arrow-up send" aria-hidden="true"></i
-                        ></span>
-                        <span>$2000</span>
-                      </div>
-                    </td>
-                    <td>
-                      <span
-                        class="badge fs-6 fw-normal bg-tint-success text-success"
-                        >Completed</span
-                      >
-                    </td>
-                  </tr>
-                  <tr class="align-middle">
-                    <td>#12498745</td>
-                    <td>15 March, 2023</td>
-                    <td>Yousef Shawky</td>
-                    <td>Sending / Personal account</td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span
-                          ><i class="fa fa-arrow-up send" aria-hidden="true"></i
-                        ></span>
-                        <span>$785</span>
-                      </div>
-                    </td>
-                    <td>
-                      <span
-                        class="badge fs-6 fw-normal bg-tint-success text-success"
-                        >Completed</span
-                      >
-                    </td>
-                  </tr>
-                  <tr class="align-middle">
-                    <td>#13896407</td>
-                    <td>26 Nov, 2022</td>
-                    <td>Etisalat</td>
-                    <td>Sending / Telephone bill</td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span
-                          ><i class="fa fa-arrow-up send" aria-hidden="true"></i
-                        ></span>
-                        <span>$38.2</span>
-                      </div>
-                    </td>
-                    <td>
-                      <span
-                        class="badge fs-6 fw-normal bg-tint-warning text-warning"
-                        >Pending</span
-                      >
-                    </td>
-                  </tr>
-                  <tr class="align-middle">
-                    <td>#86422314</td>
-                    <td>6 Sep, 2022</td>
-                    <td>Mark Mahrous</td>
-                    <td>Receiving / Personal account</td>
+                    <td>#64553837</td>
+                    <td>2 Mar, 2023</td>
+                    <td>3</td>
+                    <td>Pull&Bear</td>
+                    <td>Sending</td>
                     <td>
                       <div class="d-flex align-items-center">
                         <span
                           ><i
-                            class="fa fa-arrow-down receive"
+                            class="fa fa-arrow-down send"
                             aria-hidden="true"
                           ></i
                         ></span>
-                        <span>$5200</span>
+                        <span>$2105</span>
                       </div>
                     </td>
                     <td>
@@ -211,37 +159,117 @@
                     </td>
                   </tr>
                   <tr class="align-middle">
-                    <td>#32754108</td>
-                    <td>17 Feb, 2022</td>
-                    <td>Water Company</td>
-                    <td>Sending / Water bill</td>
+                    <td>#41305717</td>
+                    <td>24 Aug, 2022</td>
+                    <td>2</td>
+                    <td>Balenciaga</td>
+                    <td>Sending</td>
                     <td>
                       <div class="d-flex align-items-center">
                         <span
-                          ><i class="fa fa-arrow-up send" aria-hidden="true"></i
+                          ><i
+                            class="fa fa-arrow-down send"
+                            aria-hidden="true"
+                          ></i
                         ></span>
-                        <span>$50.98</span>
+                        <span>$15000</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span
+                        class="badge fs-6 fw-normal bg-tint-success text-success"
+                        >Completed</span
+                      >
+                    </td>
+                  </tr>
+                  <tr class="align-middle">
+                    <td>#45687321</td>
+                    <td>20 Nov, 2022</td>
+                    <td>2</td>
+                    <td>mcdonald's</td>
+                    <td>Sending</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span
+                          ><i
+                            class="fa fa-arrow-down send"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <span>$20</span>
                       </div>
                     </td>
                     <td>
                       <span
                         class="badge fs-6 fw-normal bg-tint-warning text-warning"
                         >Pending</span
+                      >
+                    </td>
+                  </tr>
+                  <tr class="align-middle">
+                    <td>#21395717</td>
+                    <td>12 Jul, 2022</td>
+                    <td>2</td>
+                    <td>KFC</td>
+                    <td>Sending</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span
+                          ><i
+                            class="fa fa-arrow-down send"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <span>$50</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span
+                        class="badge fs-6 fw-normal bg-tint-success text-success"
+                        >Completed</span
+                      >
+                    </td>
+                  </tr>
+                  <tr class="align-middle">
+                    <td>#71746596</td>
+                    <td>20 Aug, 2021</td>
+                    <td>1</td>
+                    <td>EGYPTAIR</td>
+                    <td>Sending</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span
+                          ><i
+                            class="fa fa-arrow-down send"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <span>$1000</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span
+                        class="badge fs-6 fw-normal bg-tint-success text-success"
+                        >Completed</span
                       >
                     </td>
                   </tr>
 
                   <tr class="align-middle">
-                    <td>#65213458</td>
-                    <td>24 Oct, 2021</td>
-                    <td>Gas Company</td>
-                    <td>Sending / Gas bill</td>
+                    <td>#20341007</td>
+                    <td>7 Jun, 2021</td>
+                    <td>2</td>
+                    <td>Uber</td>
+                    <td>Sending</td>
                     <td>
                       <div class="d-flex align-items-center">
                         <span
-                          ><i class="fa fa-arrow-up send" aria-hidden="true"></i
+                          ><i
+                            class="fa fa-arrow-down send"
+                            aria-hidden="true"
+                          ></i
                         ></span>
-                        <span>$45</span>
+                        <span>$15000</span>
                       </div>
                     </td>
                     <td>
