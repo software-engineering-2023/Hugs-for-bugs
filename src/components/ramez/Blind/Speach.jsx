@@ -12,6 +12,7 @@ function Speach() {
   const [isListening, setIsListening] = useState(true)
   const [note, setNote] = useState(null)
   const [savedNotes, setSavedNotes] = useState([])
+  const [blindState,setBlindState]=useState("Welcome")
 
   const onMic = () => {
     setIsListening(true);
@@ -42,7 +43,11 @@ function Speach() {
     }
   }
   const handleSaveNote = () => {
-    setSavedNotes([note, ...savedNotes])
+
+    if (note === "choose one" || note == "choose 1") {
+    }
+    else if (note)
+      setSavedNotes([note, ...savedNotes])
     setNote('')
   }
 
@@ -70,12 +75,22 @@ function Speach() {
   function speakWelcomeMessage() {
     const msg = new SpeechSynthesisUtterance();
     msg.text =
+
       "Welcome to our banking assistance service for visually impaired individuals. Please listen to the following options and speak the option number to access the desired service: Option 1: Register to use the web application (if you already have a bank account). Option 2: Open or close a bank account. Option 3: Apply for a credit card. Option 4: Apply for a personal or car loan. Option 5: View your bank account transactions. Option 6: View your credit card transactions. Option 7: View your credit card points and redeem them for cashback. Option 8: Pay your credit card bill partially or in full. Option 9: Transfer money to other bank accounts (internal, domestic, or international). Option 10: Set and receive reminders for payments due for gas, electricity, water, or telephone bills. Option 11: Receive reminders for payments due for loans or credit card bills. Option 12: Pay your gas, water, electricity, or telephone bills through a third-party app (optional) or through the bank itself (mandatory). Option 13: Report technical issues with the system. Option 14: Receive notifications about issue resolution and bank announcements. Option 15: Report credit card theft, loss, damage, or apply for a replacement. Please speak the option number you wish to access.";
     window.speechSynthesis.speak(msg);
+
+  }
+
+  function speakregisterMessage() {
+    const msg = new SpeechSynthesisUtterance();
+    msg.text = "pleae say your username "
+    window.speechSynthesis.speak(msg);
+
   }
 
   function keyPressHandler(event) {
     if (event.key === " ") {
+      window.speechSynthesis.cancel();
       if (isListening) {
         offMic();
       } else {
