@@ -22,7 +22,6 @@ const MainView = () => {
       {view === "SignUp" ? <SignUp /> : null}
       {view === "Blind" ? <Blind /> : null}
       {view === "Speach" ? <Speach /> : null}
-      
     </>
   )
 

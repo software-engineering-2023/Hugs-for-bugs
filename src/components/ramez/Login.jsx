@@ -1,5 +1,6 @@
 import React from 'react'
 import './styleLogin.css'
+import { Link } from 'react-router-dom'
 const Login = () => {
     return (
         <div>
@@ -12,9 +13,9 @@ const Login = () => {
                         </div>
                         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                             <form>
-                
+
                                 <div class="divider d-flex align-items-center my-4">
-                                    <p class="text-center fw-bold mx-3 mb-0" style={{fontSize: "3rem" }}>Login</p>
+                                    <p class="text-center fw-bold mx-3 mb-0" style={{ fontSize: "3rem" }}>Login</p>
                                 </div>
 
                                 <div class="form-outline mb-4">
@@ -39,8 +40,10 @@ const Login = () => {
                                     <a href="#!" class="text-body">Forgot password?</a>
                                 </div>
                                 <div class="text-center text-lg-start mt-4 pt-2">
-                                    <button type="button" class="btn btn-primary btn-lg"
-                                    >Login</button>
+                                    <Link to={`Admin`}>
+                                        <button type="button" class="btn btn-primary btn-lg"
+                                        >Login</button>
+                                    </Link>
                                     <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
                                         class="link-danger">Register</a></p>
                                 </div>
@@ -54,3 +57,14 @@ const Login = () => {
 }
 
 export default Login
+
+
+
+
+
+
+
+
+
+
+
