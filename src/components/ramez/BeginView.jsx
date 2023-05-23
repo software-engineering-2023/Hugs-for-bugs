@@ -39,7 +39,7 @@ const BeginView = ({ setView }) => {
         <text style={{ color: '#0B173B', fontSize: "6rem", fontWeight: "bold" }}>
           Save your <br />Money with RYMM</text>
       </div>
-      <div className='position-absolute' style={{ left: "50px", top: "380px " }}>
+      <div className='position-absolute' style={{ left: "25px", top: "380px " }}>
         Discover a new era of banking with RYMM Bank. Experience the power of personalized financial solutions tailored to your needs.<br />
         From seamless digital banking to expert financial guidance, RYMM Bank is committed to helping you achieve your financial goals.
       </div>

@@ -12,8 +12,7 @@ const Login = () => {
                         </div>
                         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                             <form>
-                    
-
+                
                                 <div class="divider d-flex align-items-center my-4">
                                     <p class="text-center fw-bold mx-3 mb-0" style={{fontSize: "3rem" }}>Login</p>
                                 </div>
