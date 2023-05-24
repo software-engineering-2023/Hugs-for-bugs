@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
-
+import { Lind } from 'react'
+import { Link } from 'react-router-dom';
 const Admin = () => {
   const handleAnnouncements = () => {
     const announcementButton = document.getElementById("announcements");
@@ -40,6 +41,11 @@ const Admin = () => {
           <nav className="navigation">
             <a href="#services">Handle Issues</a>
             <a href="#projects">Notify</a>
+            <Link to={`/`}>
+              <button type="button" class="btn btn-light position-absolute"
+                style={{ top: "20px", right: "30px" }}
+              >Logout</button>
+            </Link>
           </nav>
         </header>
 
