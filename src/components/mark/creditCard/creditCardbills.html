@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank System - Credit Card Bill</title>
+  <style>
+ 
+    body {
+      color: #000;
+      overflow-x: hidden;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .bill-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .bill {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 48%;
+      max-width: 200px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background-color: #5a99dd;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .partial-payment {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .partial-payment input {
+      width: 100%;
+      max-width: 200px;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bank System - Credit Card Bill</h1>
+    <div class="bill-container">
+      <p class="bill">Total Bill Amount: $1000</p>
+    </div>
+    <div class="btn-container">
+      <button id="pay-partial-btn" class="btn">Pay Partially</button>
+      <button id="pay-full-btn" class="btn">Pay Fully</button>
+    </div>
+    <div class="partial-payment">
+      <input type="text" id="partial-amount" placeholder="Enter amount to pay">
+      <button id="pay-partially" class="btn">Pay</button>
+    </div>
+    <div class="message"></div>
+  </div>
+
+  <script>
+    const payPartialBtn = document.getElementById("pay-partial-btn");
+    const payFullBtn = document.getElementById("pay-full-btn");
+    const partialPaymentSection = document.querySelector(".partial-payment");
+    const partialAmountInput = document.getElementById("partial-amount");
+    const payPartialButton = document.getElementById("pay-partially");
+    const billDisplay = document.querySelector(".bill");
+    const message = document.querySelector(".message");
+
+    payPartialBtn.addEventListener("click", () => {
+      partialPaymentSection.style.display = "block";
+      message.textContent = "";
+    });
+
+    payFullBtn.addEventListener("click", () => {
+      billDisplay.textContent = "Total Bill Amount: $0";
+      message.textContent = "";
+    });
+
+    payPartialButton.addEventListener("click", () => {
+      const amountToPay = Number(partialAmountInput.value);
+      const totalBillAmount = 1000;
+
+      if (isNaN(amountToPay)) {
+        message.textContent = "Invalid amount entered. Please enter a valid number.";
+        return;
+      }
+
+      if (amountToPay > totalBillAmount) {
+        message.textContent = `You should only pay $${totalBillAmount}`;
+        return;
+      }
+
+      billDisplay.textContent = `Total Bill Amount: $${totalBillAmount - amountToPay}`;
+      partialPaymentSection.style.display = "none";
+      partialAmountInput.value = "";
+      message.textContent = "Payment successful!";
+    });
+  </script>
+</body>
+</html>

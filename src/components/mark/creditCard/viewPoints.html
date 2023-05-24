@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank System - Credit Card Points</title>
+  <style>
+   body {
+      color: #000;
+      overflow-x: hidden;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .points-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .points {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background-color: #5a99dd;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bank System - Credit Card Points</h1>
+    <div class="points-container">
+      <p class="points">Total Points: 500</p>
+    </div>
+    <button id="redeem-btn" class="btn">Redeem Points for Cashback</button>
+    <div class="message"></div>
+  </div>
+
+  <script>
+    const redeemButton = document.getElementById("redeem-btn");
+    const pointsDisplay = document.querySelector(".points");
+    const message = document.querySelector(".message");
+
+    redeemButton.addEventListener("click", () => {
+      redeemButton.style.display = "none";
+      message.textContent = "Redeem points succeeded";
+      pointsDisplay.textContent = "Total Points: 0";
+    });
+  </script>
+</body>
+</html>
