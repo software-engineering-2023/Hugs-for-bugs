@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banker = ({setView}) => {
   return (
@@ -60,8 +61,11 @@ const Banker = ({setView}) => {
             }
           `}
         </style>
+      
+
       </head>
       <body>
+        
         <div style={{
               width: "600px",
               margin: "auto",
@@ -69,7 +73,7 @@ const Banker = ({setView}) => {
             }}>
           <h1>Bank System</h1>
           <div class="btn-container">
-            <a onClick={()=>setView("HandleCredit")} class="btnmark">View All Loan Applications</a>
+            <a onClick={()=>setView("BankerLoan")} class="btnmark">View All Loan Applications</a>
             <a onClick={()=>setView("HandleCredit")} class="btnmark">View All Credit Card Applications</a>
           </div>
         </div>

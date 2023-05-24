@@ -2,17 +2,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const BankerNavigation = () => {
+const BankerNavigation = ({ setView }) => {
     return (
 
-        <div> <Link to={`/`}>
-            <button type="button" class="btn btn-light position-absolute"
-                style={{ top: "20px", right: "30px" }}
-            >Logout</button> 
-        </Link>
+        <>
+            <header>
+                <div className="logo-container">
+                    <img src={require('../ramez/images/logo.png')} alt="Logo" className="logo-image" />
+                </div>
+                <nav className="navigation">
+
+                    
+                    <a style={{ color: "white" }} onClick={() => setView("BankerLoan")}>Handle Loans</a>
+                    <a style={{ color: "white" }} onClick={() => setView("HandleCredit")}>Credit Cards</a>
+                    <Link to={`/`}>
+                        <button type="button" class="btn btn-light"
+                        >Logout</button>
+                    </Link>
+                </nav>
+            </header>
+            <div>
 
 
-            {/* <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "510px" }}>
+                {/* <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "510px" }}>
                 <button class="btn btn-secondary dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Transactions
                 </button>
@@ -50,35 +62,35 @@ const BankerNavigation = () => {
                 </ul>
             </div> */}
 
-            <div
-                style={{
-                    backgroundColor: '#0B173B',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover',
-                    height: '80px'
-                }}
-            >
-            </div>
+                <div
+                    style={{
+                        backgroundColor: '#0B173B',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover',
+                        height: '80px'
+                    }}
+                >
+                </div>
 
 
 
-            <img class="position-absolute"
-                style={{ top: "-25px", left: "50px" }}
-                src={require('../ramez/images/logo.png')}>
-            </img>
+                <img class="position-absolute"
+                    style={{ top: "-25px", left: "50px" }}
+                    src={require('../ramez/images/logo.png')}>
+                </img>
 
-            <text class="position-absolute text-lg" style={{ color: 'white', top: "30px", left: "40px", fontSize: "2rem", font: "bold" }}>
-                RYMM</text>
+                <text class="position-absolute text-lg" style={{ color: 'white', top: "30px", left: "40px", fontSize: "2rem", font: "bold" }}>
+                    RYMM</text>
 
 
-            {/* <text class="position-absolute text-lg" style={{ color: 'white', top: "28px", right: "230px", fontSize: "1rem", font: "bold" }}
+                {/* <text class="position-absolute text-lg" style={{ color: 'white', top: "28px", right: "230px", fontSize: "1rem", font: "bold" }}
                 onClick={() => setView("BeginView")}
             >
                 Home</text> */}
 
-        </div>
+            </div>
 
-
+        </>
     )
 }
 
