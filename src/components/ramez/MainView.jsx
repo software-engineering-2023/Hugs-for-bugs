@@ -10,18 +10,21 @@ import Login from './Login';
 import SignUp from './SignUp';
 import Blind from './Blind/Blind';
 import Speach from './Blind/Speach';
+import Banker from '../mark/Banker';
+import BankerMainView from '../mark/BankerMainView';
 const MainView = () => {
 
   let [view, setView] = useState("BeginView");
   return (
     <>
       <Navigation setView={setView} />
-      {view === "BeginView" ? <BeginView setView={setView}/> : null}
+      {view === "BeginView" ? <BeginView setView={setView} /> : null}
       {view === "Credit_Card" ? <Credit_Card /> : null}
       {view === "Login" ? <Login /> : null}
       {view === "SignUp" ? <SignUp /> : null}
       {view === "Blind" ? <Blind /> : null}
       {view === "Speach" ? <Speach /> : null}
+
     </>
   )
 

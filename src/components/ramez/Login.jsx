@@ -40,7 +40,7 @@ const Login = () => {
                                     <a href="#!" class="text-body">Forgot password?</a>
                                 </div>
                                 <div class="text-center text-lg-start mt-4 pt-2">
-                                    <Link to={`Admin`}>
+                                    <Link to={`BankerMainView`}>
                                         <button type="button" class="btn btn-primary btn-lg"
                                         >Login</button>
                                     </Link>

@@ -13,29 +13,34 @@ import Resolution from './components/youssef/Resolution';
 import System from './components/youssef/Sytem'
 import Transaction from './components/youssef/Transaction';
 import CreditCardHandle from './components/youssef/CreditCardHandle'
+import BankerMainView from './components/mark/BankerMainView';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainView/>,
+    element: <MainView />,
   },
   {
-    path:"Admin/",
-    element:<Admin/>
+    path: "Admin/",
+    element: <Admin />
   },
   {
-    path:"Resolution/",
-    element:<Resolution/>
-  }  ,
+    path: "Resolution/",
+    element: <Resolution />
+  },
   {
-    path:"System/",
-    element:<System/>
-  },{
-    path:"Transaction/",
-    element:<Transaction/>
+    path: "System/",
+    element: <System />
+  }, {
+    path: "Transaction/",
+    element: <Transaction />
   }
-  ,{
-    path:"CreditCardHandle",
-    element:<CreditCardHandle/>
+  , {
+    path: "CreditCardHandle",
+    element: <CreditCardHandle />
+  },
+  {
+    path: "BankerMainView",
+    element: <BankerMainView />
   }
 ]);
 
