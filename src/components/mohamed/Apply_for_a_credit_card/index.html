@@ -37,10 +37,10 @@
         background: #555;
       }
       body {
-        color: #000;
+        color: #000000;
         overflow-x: hidden;
         height: 100%;
-        background-image: url("images/bg.png");
+
         background-repeat: no-repeat;
         background-size: 100% 130%;
       }
@@ -52,7 +52,7 @@
         box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
       }
       .blue-text {
-        color: #00bcd4;
+        color: #ffffff;
       }
       .form-control-label {
         margin-bottom: 0;
@@ -204,7 +204,7 @@
                   <button
                     type="submit"
                     class="btn-block btn-primary"
-                    onclick="bootstrapAlert()"
+                    onclick="bootstrapAlert() "
                   >
                     Apply
                   </button>
@@ -220,6 +220,7 @@
       type="text/javascript"
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
     ></script>
+
     <script>
       function bootstrapAlert() {
         v1 = document.getElementById("fname");
@@ -348,5 +349,6 @@
         e.preventDefault();
       });
     </script>
+    <script src="notificationPopup.js"></script>
   </body>
 </html>
