@@ -49,7 +49,7 @@ const BeginView = ({ setView }) => {
       <button type="button" class="btn btn-primary btn-lg position-absolute"
         style={{ left: "50px", top: "450px " }} onClick={()=>{setView("Open_bank_account")}}>Open Account</button>
       <button type="button" class="btn btn-outline-dark btn-lg position-absolute"
-        style={{ left: "250px", top: "450px " }}>See your accounts</button>
+        style={{ left: "250px", top: "450px " }} onClick={()=>{setView("CloseAccount")}}>Close accounts</button>
 
 
       <div className='position-absolute' style={{ left: "50px", top: "520px " }}>

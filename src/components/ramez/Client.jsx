@@ -22,7 +22,7 @@ import View_bank_account_transactions from '../mohamed/View_bank_account_transac
 import View_credit_card_transactions from '../mohamed/View_credit_card_transactions';
 import Open_bank_account from '../mohamed/Open_bank_account'
 import BeginNavigation from './BeginNavigation';
-
+import CloseAccount from '../mark/CloseAccount'
 const Client = () => {
     let [view, setView] = useState("BeginView");
     return (
@@ -43,6 +43,7 @@ const Client = () => {
             {view === "View_bank_account_transactions" ? <View_bank_account_transactions /> : null}
             {view === "View_credit_card_transactions" ? <View_credit_card_transactions /> : null}
             {view === "Open_bank_account" ? <Open_bank_account /> : null}
+            {view === "CloseAccount" ? <CloseAccount /> : null}
 
         </>
     )
