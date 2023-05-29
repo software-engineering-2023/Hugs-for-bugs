@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5efef;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .container h2 {
+      margin-top: 0;
+    }
+
+    .container p {
+      margin-bottom: 10px;
+    }
+
+    .container .handle-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .container .success-message {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 4px;
+      display: none;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function handleIssue(containerId) {
+      var handleButton = document.getElementById(containerId + '-handleButton');
+      var successMessage = document.getElementById(containerId + '-successMessage');
+      
+      handleButton.style.display = 'none';
+      successMessage.style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <h1>Handling Technical Issues</h1>
+  
+  <div class="container">
+    <h2>Mark Mahrous</h2>
+    <p>Type of Issue: Login Error</p>
+    <p>
+      Mark Mahrous is unable to login to their online banking account. They receive an "Invalid credentials" error message despite entering the correct username and password.
+    </p>
+    <button id="mark-mahrous-handleButton" class="handle-button" onclick="handleIssue('mark-mahrous')">Handle Issue</button>
+    <div id="mark-mahrous-successMessage" class="success-message">
+      The issue has been handled successfully.
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Kermina Safwat</h2>
+    <p>Type of Issue: Transaction Recording</p>
+    <p>
+      Kermina Safwat notices that transactions are not appearing in their transaction history. Any new transactions made by the user are not being recorded or displayed in their account statement.
+    </p>
+    <button id="kermina-safwat-handleButton" class="handle-button" onclick="handleIssue('kermina-safwat')">Handle Issue</button>
+    <div id="kermina-safwat-successMessage" class="success-message">
+      The issue has been handled successfully.
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Lionel Messi</h2>
+    <p>Type of Issue: System Performance</p>
+    <p>
+      Messi experiences slow response times and frequent timeouts while using the online banking system. This is causing inconvenience and delays in carrying out banking operations.
+    </p>
+    <button id="messi-handleButton" class="handle-button" onclick="handleIssue('messi')">Handle Issue</button>
+    <div id="messi-successMessage" class="success-message">
+      The issue has been handled successfully.
+    </div>
+  </div>
+</body>
+</html>
