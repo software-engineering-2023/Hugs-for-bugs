@@ -2,10 +2,11 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 const BeginView = ({ setView }) => {
 
-  
 
   return (
     <div  >
+
+    
 
 
       <img class="position-absolute"

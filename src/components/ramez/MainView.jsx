@@ -24,18 +24,7 @@ import BeginNavigation from './BeginNavigation';
 
 const MainView = () => {
 
-  let [view, setView] = useState("Login");
-  useEffect(() => {
-    const msg = new SpeechSynthesisUtterance()
-    msg.text = "Enter Space if you want to turn on Blind mode"
-    window.speechSynthesis.speak(msg)
-  }, []);
-
-  let handleAnswerChange = (event) => {
-    if (event.key === ' ') {
-      setView("Speach")
-    }
-  }
+ 
   return (
     <>
       <div>

@@ -10,8 +10,8 @@
   <body>
     <div class="wrapper">
       <div class="title-text">
-        <div class="title login">Login Form</div>
-        <div class="title signup">Signup Form</div>
+        <div class="title login">Login </div>
+        <div class="title signup">Signup </div>
       </div>
       <div class="form-container">
         <div class="slide-controls">
@@ -32,7 +32,7 @@
 
             <div class="field btn">
               <div class="btn-layer"></div>
-              <input type="submit" value="Login" onclick="dd()"/>
+              <input type="submit" value="Login" onclick="dd();"/>
             </div>
             <div class="signup-link">
               Not a member? <a href="">Signup now</a>
@@ -49,14 +49,14 @@
               <input type="text" placeholder="Home Address" required />
             </div>
             <div class="field">
-              <input type="password" placeholder="Password" required />
+              <input id="pas1" type="password" placeholder="Password" required />
             </div>
             <div class="field">
-              <input type="password" placeholder="Confirm password" required />
+              <input id="pas2" type="password" placeholder="Confirm password" required />
             </div>
             <div class="field btn">
               <div class="btn-layer"></div>
-              <input type="submit" value="Signup" />
+              <input type="submit" value="Signup" onclick="ss();" />
             </div>
           </form>
         </div>
@@ -79,6 +79,7 @@
       };
       signupLink.onclick = () => {
         signupBtn.click();
+        alert("Invalid credentials. Please try again.");
         return false;
       };
     </script>
