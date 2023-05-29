@@ -20,29 +20,16 @@ import Apply_for_a_loan from '../mohamed/Apply_for_a_loan'
 import Notifications_reminders from '../mohamed/Notifications_reminders';
 import View_bank_account_transactions from '../mohamed/View_bank_account_transactions'
 import View_credit_card_transactions from '../mohamed/View_credit_card_transactions';
+import BeginNavigation from './BeginNavigation';
 
 const MainView = () => {
 
-  let [view, setView] = useState("BeginView");
+  let [view, setView] = useState("Login");
   return (
     <>
-      <Navigation setView={setView} />
-      {view === "BeginView" ? <BeginView setView={setView} /> : null}
-      {view === "Credit_Card" ? <Credit_Card setView={setView} /> : null}
-      {view === "Login" ? <Login /> : null}
+      <BeginNavigation setView={setView} />
+      {view === "Login" ? <Login setView={setView}/> : null}
       {view === "SignUp" ? <SignUp /> : null}
-      {view === "Blind" ? <Blind /> : null}
-      {view === "Speach" ? <Speach /> : null}
-      {view === "BillPaymentReminder" ? <BillPaymentReminder /> : null}
-      {view === "BillsPayment" ? <BillPayment /> : null}
-      {view === "CreditCardBills" ? <CreditCardBills /> : null}
-      {view === "ViewPoints" ? <ViewPoints /> : null}
-      {view === "CreditCardIssue" ? <CreditCardIssue /> : null}
-      {view === "TechnicalIssue" ? <TechnicalIssue /> : null}
-      {view === "Apply_for_a_loan" ? <Apply_for_a_loan /> : null}
-      {view === "Notifications_reminders" ? <Notifications_reminders /> : null}
-      {view === "View_bank_account_transactions" ? <View_bank_account_transactions /> : null}
-      {view === "View_credit_card_transactions" ? <View_credit_card_transactions /> : null}
     </>
   )
 }

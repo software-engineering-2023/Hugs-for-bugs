@@ -1,7 +1,84 @@
 import React from 'react';
 import { useEffect } from 'react';
 
+import $ from 'jquery';
+import 'bootstrap-growl';
+
+
 function Apply_for_a_loan() {
+  function showNotification() {
+    $.bootstrapGrowl("Fill the required fields.", {
+      ele: 'body',
+      type: 'danger',
+      offset: { from: 'top', amount: 90 },
+      align: 'center',
+      width: 250,
+      delay: 4000,
+      allow_dismiss: true,
+      stackup_spacing: 10,
+    });
+  }
+  function bootstrapAlert() {
+    let v1 = document.getElementById("fname");
+    let v2 = document.getElementById("lname");
+    let v3 = document.getElementById("email");
+    let v4 = document.getElementById("mob");
+    let v5 = document.getElementById("job");
+    let v6 = document.getElementById("ans");
+    let v7 = document.getElementById("money");
+
+
+   
+
+    $(".bootstrap-growl").remove();
+    if (
+      v1.value == "" ||
+      v2.value == "" ||
+      v3.value == "" ||
+      v4.value == "" ||
+      v5.value == "" ||
+      v6.value == "" ||
+      v7.value == ""
+    ) {
+
+      $.bootstrapGrowl("Fill the required fields.", {
+        ele: "body", // which element to append to
+        type: "danger", // (null, 'info', 'error', 'success')
+        offset: { from: "top", amount: 90 }, // 'top', or 'bottom'
+        align: "center", // ('left', 'right', or 'center')
+
+        width: 250, // (integer, or 'auto')
+        delay: 4000,
+        allow_dismiss: true,
+        stackup_spacing: 10, // spacing between consecutively stacked growls.
+      });
+    } else {
+      $.bootstrapGrowl("Well done! submitted successfully.", {
+        ele: "body", // which element to append to
+        type: "success", // (null, 'info', 'error', 'success')
+        offset: { from: "top", amount: 90 }, // 'top', or 'bottom'
+        align: "center", // ('left', 'right', or 'center')
+        width: 300, // (integer, or 'auto')
+        delay: 4000,
+        allow_dismiss: true,
+        stackup_spacing: 10, // spacing between consecutively stacked growls.
+      });
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function validate(val) {
     let v1 = document.getElementById("fname");
     let v2 = document.getElementById("lname");
@@ -10,12 +87,12 @@ function Apply_for_a_loan() {
     let v5 = document.getElementById("job");
     let v6 = document.getElementById("ans");
 
-   let flag1 = true;
-   let  flag2 = true;
-   let  flag3 = true;
-   let flag4 = true;
-   let flag5 = true;
-   let flag6 = true;
+    let flag1 = true;
+    let flag2 = true;
+    let flag3 = true;
+    let flag4 = true;
+    let flag5 = true;
+    let flag6 = true;
 
     if (val >= 1 || val == 0) {
       if (v1.value == "") {
@@ -184,7 +261,7 @@ function Apply_for_a_loan() {
               <h3>Apply for a loan</h3>
 
               <div class="cardm">
-                <form class="form-card" >
+                <div class="form-card" >
                   <div class="row justify-content-between text-left">
                     <div class="form-group col-sm-6 flex-column d-flex">
                       <label class="form-control-label px-3"
@@ -195,7 +272,7 @@ function Apply_for_a_loan() {
                         id="fname"
                         name="fname"
                         placeholder="Enter your first name"
-                        onblur={()=>validate(1)}
+                        onblur={() => validate(1)}
                       />
                     </div>
                     <div class="form-group col-sm-6 flex-column d-flex">
@@ -207,7 +284,7 @@ function Apply_for_a_loan() {
                         id="lname"
                         name="lname"
                         placeholder="Enter your last name"
-                        onblur={()=>validate(2)}
+                        onblur={() => validate(2)}
                       />
                     </div>
                   </div>
@@ -221,7 +298,7 @@ function Apply_for_a_loan() {
                         id="email"
                         name="email"
                         placeholder="Enter your national ID"
-                        onblur={()=>validate(3)}
+                        onblur={() => validate(3)}
                       />
                     </div>
                     <div class="form-group col-sm-6 flex-column d-flex">
@@ -235,7 +312,7 @@ function Apply_for_a_loan() {
                         id="mob"
                         name="mob"
                         placeholder="Enter your first phone number"
-                        onblur={()=>validate(4)}
+                        onblur={() => validate(4)}
                       />
                     </div>
                   </div>
@@ -249,7 +326,7 @@ function Apply_for_a_loan() {
                         id="job"
                         name="job"
                         placeholder="Enter your job title"
-                        onblur={()=>validate(5)}
+                        onblur={() => validate(5)}
                       />
                     </div>
                     <div class="form-group col-sm-6 flex-column d-flex">
@@ -261,7 +338,7 @@ function Apply_for_a_loan() {
                         id="mob"
                         name="mob"
                         placeholder="Enter your second phone number"
-                        onblur={()=>validate(4)}
+                        onblur={() => validate(4)}
                       />
                     </div>
                   </div>
@@ -277,7 +354,7 @@ function Apply_for_a_loan() {
                         id="ans"
                         name="ans"
                         placeholder="Enter your answer"
-                        onblur={()=>validate(6)}
+                        onblur={() => validate(6)}
                       />
                     </div>
                   </div>
@@ -301,7 +378,7 @@ function Apply_for_a_loan() {
                         id="money"
                         name="money"
                         placeholder="Enter the amount of money in EGP"
-                        onblur={()=>validate(4)}
+                        onblur={() => validate(4)}
                       />
                     </div>
                   </div>
@@ -311,13 +388,15 @@ function Apply_for_a_loan() {
                       <button
                         // type="submit"
                         class="btn-block btn-primary"
-                        onclick="bootstrapAlert()"
+                        onClick={() =>
+                          showNotification()
+                        }
                       >
                         Apply
                       </button>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
