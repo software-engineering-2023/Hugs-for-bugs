@@ -1,109 +1,28 @@
 import React from 'react'
+import { useEffect, useState } from 'react';
 
 
 const Open_bank_account = () => {
-    const bootstrapAlert = () => {
-        const v1 = document.getElementById("fname");
-        const v2 = document.getElementById("lname");
-        const v3 = document.getElementById("email");
-        const v4 = document.getElementById("mob");
-        const v5 = document.getElementById("job");
-        const v7 = document.getElementById("money");
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const [errorMessage, setErrorMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
 
-        if (
-            v1.value === "" ||
-            v2.value === "" ||
-            v3.value === "" ||
-            v4.value === "" ||
-            v5.value === "" ||
-            emailPattern.test(v7.value) === false
-        ) {
-            alert("Fill the required fields.");
+    const validate = () => {
+        const fname = document.getElementById('fname').value;
+        const lname = document.getElementById('lname').value;
+        const email = document.getElementById('email').value;
+        const mob = document.getElementById('mob').value;
+        const job = document.getElementById('job').value;
+        const money = document.getElementById('money').value;
+
+        if (!fname || !lname || !email || !mob || !job || !money) {
+            setErrorMessage('Fill all the required fields.');
+            setSuccessMessage('');
         } else {
-            alert("Well done! submitted successfully.");
+            setErrorMessage('');
+            setSuccessMessage('Form submitted successfully.');
+            // Add code here to handle form submission logic
         }
-    };
-
-    const validate = (val) => {
-        const v1 = document.getElementById("fname");
-        const v2 = document.getElementById("lname");
-        const v3 = document.getElementById("email");
-        const v4 = document.getElementById("mob");
-        const v5 = document.getElementById("job");
-        const v6 = document.getElementById("ans");
-
-        let flag1 = true;
-        let flag2 = true;
-        let flag3 = true;
-        let flag4 = true;
-        let flag5 = true;
-        let flag6 = true;
-
-        if (val >= 1 || val === 0) {
-            if (v1.value === "") {
-                v1.style.borderColor = "red";
-                flag1 = false;
-            } else {
-                v1.style.borderColor = "green";
-                flag1 = true;
-            }
-        }
-
-        if (val >= 2 || val === 0) {
-            if (v2.value === "") {
-                v2.style.borderColor = "red";
-                flag2 = false;
-            } else {
-                v2.style.borderColor = "green";
-                flag2 = true;
-            }
-        }
-        if (val >= 3 || val === 0) {
-            if (v3.value === "") {
-                v3.style.borderColor = "red";
-                flag3 = false;
-            } else {
-                v3.style.borderColor = "green";
-                flag3 = true;
-            }
-        }
-        if (val >= 4 || val === 0) {
-            if (v4.value === "") {
-                v4.style.borderColor = "red";
-                flag4 = false;
-            } else {
-                v4.style.borderColor = "green";
-                flag4 = true;
-            }
-        }
-        if (val >= 5 || val === 0) {
-            if (v5.value === "") {
-                v5.style.borderColor = "red";
-                flag5 = false;
-            } else {
-                v5.style.borderColor = "green";
-                flag5 = true;
-            }
-        }
-        if (val >= 6 || val === 0) {
-            if (v6.value === "") {
-                v6.style.borderColor = "red";
-                flag6 = false;
-            } else {
-                v6.style.borderColor = "green";
-                flag6 = true;
-            }
-        }
-
-        const flag = flag1 && flag2 && flag3 && flag4 && flag5 && flag6;
-        return flag;
-    };
-
-    const myLinkClick = (e) => {
-        e.preventDefault();
-    };
-
+    }
     return (
         <>
             <head>
@@ -208,8 +127,19 @@ const Open_bank_account = () => {
                         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
                             <h3>Open a bank account</h3>
 
+                            {errorMessage && (
+                                <div class="alert alert-danger" role="alert">
+                                    {errorMessage}
+                                </div>
+                            )}
+                            {successMessage && (
+                                <div class="alert alert-success" role="alert">
+                                    {successMessage}
+                                </div>
+                            )}
+
                             <div class="cardmm">
-                                <form class="form-card" onsubmit="event.preventDefault()">
+                                <div class="form-card" onsubmit="event.preventDefault()">
                                     <div class="row justify-content-between text-left">
                                         <div class="form-group col-sm-6 flex-column d-flex">
                                             <label class="form-control-label px-3"
@@ -322,15 +252,14 @@ const Open_bank_account = () => {
                                     <div class="row justify-content-end">
                                         <div class="form-group col-sm-6">
                                             <button
-                                                type="submit"
                                                 class="btn-block btn-primary"
-                                                onclick="bootstrapAlert()"
+                                                onClick={validate}
                                             >
                                                 Open a new account
                                             </button>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
