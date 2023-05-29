@@ -83,7 +83,7 @@ const BillPaymentReminder = () => {
             }>
                 <h1>Bill Payment Reminders</h1>
 
-                <form id="reminderForm" action="reminder.php" method="POST">
+                <form id="reminderForm" >
                     <label htmlFor="billType">Select Bill Type:</label>
                     <select id="billType" name="billType" required>
                         <option value="">-- Select Bill Type --</option>
@@ -115,7 +115,7 @@ const BillPaymentReminder = () => {
                     </div>
                     <br></br>
 
-                    <input type="submit" value="Set Reminder" />
+                    <input  value="Set Reminder" />
                 </form>
 
                 {reminderSuccess && (

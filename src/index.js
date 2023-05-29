@@ -14,6 +14,7 @@ import System from './components/youssef/Sytem'
 import Transaction from './components/youssef/Transaction';
 import CreditCardHandle from './components/youssef/CreditCardHandle'
 import BankerMainView from './components/mark/BankerMainView';
+import Client from './components/ramez/Client';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
   {
     path: "BankerMainView",
     element: <BankerMainView />
+  }
+  ,
+  {
+    path: "CLient",
+    element: <Client />
   }
 ]);
 
