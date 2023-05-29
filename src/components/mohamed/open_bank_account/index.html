@@ -29,7 +29,7 @@
 
       /* Handle */
       ::-webkit-scrollbar-thumb {
-        background: #888;
+        background: #faf9f9;
       }
 
       /* Handle on hover */
@@ -37,10 +37,10 @@
         background: #555;
       }
       body {
-        color: #000000;
+        color: #000;
         overflow-x: hidden;
         height: 100%;
-
+        background-color: rgb(255, 255, 255);
         background-repeat: no-repeat;
         background-size: 100% 130%;
       }
@@ -52,7 +52,7 @@
         box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
       }
       .blue-text {
-        color: #ffffff;
+        color: #00bcd4;
       }
       .form-control-label {
         margin-bottom: 0;
@@ -99,7 +99,7 @@
     <div class="container-fluid px-1 py-5 mx-auto">
       <div class="row d-flex justify-content-center">
         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-          <h3>Apply for a credit card form</h3>
+          <h3>Open a bank account</h3>
 
           <div class="card">
             <form class="form-card" onsubmit="event.preventDefault()">
@@ -144,15 +144,13 @@
                 </div>
                 <div class="form-group col-sm-6 flex-column d-flex">
                   <label class="form-control-label px-3"
-                    >First phone number<span class="text-danger">
-                      *</span
-                    ></label
+                    >Email<span class="text-danger"> *</span></label
                   >
                   <input
-                    type="number"
-                    id="mob"
-                    name="mob"
-                    placeholder="Enter your first phone number"
+                    type="Email"
+                    id="money"
+                    name="money"
+                    placeholder="Enter an Email"
                     onblur="validate(4)"
                   />
                 </div>
@@ -172,6 +170,36 @@
                 </div>
                 <div class="form-group col-sm-6 flex-column d-flex">
                   <label class="form-control-label px-3"
+                    >First phone number<span class="text-danger">
+                      *</span
+                    ></label
+                  >
+                  <input
+                    type="number"
+                    id="mob"
+                    name="mob"
+                    placeholder="Enter your first phone number"
+                    onblur="validate(4)"
+                  />
+                </div>
+              </div>
+
+              <div class="row justify-content-between text-left">
+                <div class="form-group col-6 flex-column d-flex">
+                  <label>
+                    Type of bank account type<span class="text-danger">
+                      *</span
+                    ></label
+                  >
+                  <select class="form-control">
+                    >
+                    <option value="1">Current Accoount</option>
+                    <option value="2">Saving Account</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
                     >Second phone number<span class="text-danger"> </span
                   ></label>
                   <input
@@ -183,30 +211,15 @@
                   />
                 </div>
               </div>
-              <div class="row justify-content-between text-left">
-                <div class="form-group col-12 flex-column d-flex">
-                  <label class="form-control-label px-3"
-                    >What are your guarantees?<span class="text-danger">
-                      *</span
-                    ></label
-                  >
-                  <input
-                    type="text"
-                    id="ans"
-                    name="ans"
-                    placeholder="Enter your answer"
-                    onblur="validate(6)"
-                  />
-                </div>
-              </div>
+
               <div class="row justify-content-end">
                 <div class="form-group col-sm-6">
                   <button
                     type="submit"
                     class="btn-block btn-primary"
-                    onclick="bootstrapAlert() "
+                    onclick="bootstrapAlert()"
                   >
-                    Apply
+                    Open a new account
                   </button>
                 </div>
               </div>
@@ -220,7 +233,6 @@
       type="text/javascript"
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
     ></script>
-
     <script>
       function bootstrapAlert() {
         v1 = document.getElementById("fname");
@@ -228,7 +240,8 @@
         v3 = document.getElementById("email");
         v4 = document.getElementById("mob");
         v5 = document.getElementById("job");
-        v6 = document.getElementById("ans");
+        v7 = document.getElementById("money");
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         $(".bootstrap-growl").remove();
         if (
           v1.value == "" ||
@@ -236,7 +249,7 @@
           v3.value == "" ||
           v4.value == "" ||
           v5.value == "" ||
-          v6.value == ""
+          emailPattern.test(v7.value) == false
         ) {
           $.bootstrapGrowl("Fill the required fields.", {
             ele: "body", // which element to append to
