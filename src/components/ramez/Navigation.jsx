@@ -7,23 +7,31 @@ const Navigation = ({ setView }) => {
                 <div className="logo-container">
                     <img src={require('../ramez/images/logo.png')} alt="Logo" className="logo-image" />
                 </div>
+
+
                 <nav className="navigation">
+
+                        <img class="position-absolute" src={require('../ramez/images/notification.png')}
+                            style={{ top: "14px", right: "310px",size:"50%" }}
+                            onClick={()=>setView("Notifications_reminders")}
+                        />
                     <button type="button" class="btn btn-light position-absolute"
                         style={{ top: "20px", right: "30px" }}
                         onClick={() => setView("Login")} >Login</button>
                     <button type="button" class="btn btn-outline-light position-absolute"
                         onClick={() => setView("SignUp")} style={{ top: "20px", right: "110px" }}>Sign Up</button>
 
-                    <text  onClick={() => setView("BeginView")} style={{right:"250px",color:"white",top:"29px"}} class="position-absolute">
+                    <text onClick={() => setView("BeginView")} style={{ right: "250px", color: "white", top: "29px" }} class="position-absolute">
                         Home</text>
+
 
                     <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "510px" }}>
                         <button class="btn btn-secondary dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Transactions
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item text-black" href="#" >Action</a></li>
-                            <li><a class="dropdown-item text-black" href="#">Action two</a></li>
+                            <li onClick={()=>setView("View_bank_account_transactions")}><a class="dropdown-item text-black" href="#" >View bank account transactions</a></li>
+                            <li onClick={()=>setView("View_credit_card_transactions")}><a class="dropdown-item text-black" href="#">View credit card transactions</a></li>
                             <li><a class="dropdown-item text-black" href="#">Action three</a></li>
                         </ul>
                     </div>
@@ -31,14 +39,16 @@ const Navigation = ({ setView }) => {
 
                     <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "720px" }}>
                         <button class="btn btn-secondary dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Cards
+                            Apply
                         </button>
                         <ul class="dropdown-menu">
                             <li onClick={() => setView("Credit_Card")}>
 
                                 <a class="dropdown-item text-black" href="#">Apply for Credit Card</a>
                             </li>
-                            <li><a class="dropdown-item text-black" href="#">Action two</a></li>
+                            <li
+                                onClick={() => setView("Apply_for_a_loan")}
+                            ><a class="dropdown-item text-black" href="#">Apply for a loan</a></li>
                             <li><a class="dropdown-item text-black" href="#">Action three</a></li>
                         </ul>
                     </div>
@@ -49,11 +59,29 @@ const Navigation = ({ setView }) => {
                             Bills
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item text-black" href="#">Action</a></li>
-                            <li><a class="dropdown-item text-black" href="#">Action two</a></li>
-                            <li><a class="dropdown-item text-black" href="#">Action three</a></li>
+                            <li onClick={() => setView("BillPaymentReminder")}>
+                                <a class="dropdown-item text-black" href="#">Bill_Payment_Reminder</a></li>
+                            <li onClick={() => setView("BillsPayment")}
+                            ><a class="dropdown-item text-black" href="#">Bills Payment</a></li>
+                            <li onClick={() => setView("CreditCardBills")}
+                            ><a class="dropdown-item text-black" href="#">Credit Card Bills</a></li>
+                            <li onClick={() => setView("ViewPoints")}
+                            ><a class="dropdown-item text-black" href="#">View Points</a></li>
                         </ul>
                     </div>
+
+                    <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "1110px" }}>
+                        <button class="btn btn-secondary dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Report
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li onClick={() => setView("CreditCardIssue")}>
+                                <a class="dropdown-item text-black" href="#">Credit Card Issue</a></li>
+                            <li onClick={() => setView("TechnicalIssue")}
+                            ><a class="dropdown-item text-black" href="#">TecknicalIssue</a></li>
+                        </ul>
+                    </div>
+
 
                 </nav>
             </header>

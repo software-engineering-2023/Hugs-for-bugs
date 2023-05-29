@@ -1,8 +1,9 @@
+
 import React from 'react'
 import './style.css'
 import { useLocation } from 'react-router-dom';
 
-const Credit_Card = () => {
+const Credit_Card = ({setView}) => {
   let  myLink = document.querySelector('a[href="#"]');
   myLink.addEventListener("click", function (e) {
     e.preventDefault()
@@ -123,7 +124,7 @@ const Credit_Card = () => {
       ::-webkit-scrollbar-thumb:hover {
         background: #555;
       }
-      body {
+      .body {
         color: #000;
         overflow-x: hidden;
         height: 100%;
@@ -131,7 +132,7 @@ const Credit_Card = () => {
         background-repeat: no-repeat;
         background-size: 100% 130%;
       }
-      .card {
+      .cardm {
         padding: 30px 40px;
         margin-top: 60px;
         margin-bottom: 60px;
@@ -185,14 +186,13 @@ const Credit_Card = () => {
     
     </style>
   </head>
-    <body className="snippet-body">
+    <body className="snippet-body body">
       <div class="container-fluid px-1 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
           <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
             <h3>Apply for a credit card form</h3>
 
-            <div class="card">
-              <form class="form-card" onsubmit="event.preventDefault()">
+            <div class="cardm">
                 <div class="row justify-content-between text-left">
                   <div class="form-group col-sm-6 flex-column d-flex">
                     <label class="form-control-label px-3"
@@ -203,6 +203,7 @@ const Credit_Card = () => {
                       id="fname"
                       name="fname"
                       placeholder="Enter your first name"
+                      onChange={()=>validate(1)}
                       onblur={()=>validate(1)}
                     />
                   </div>
@@ -215,6 +216,7 @@ const Credit_Card = () => {
                       id="lname"
                       name="lname"
                       placeholder="Enter your last name"
+                      onChange={()=>validate(2)}
                       onblur={()=>validate(2)}
                     />
                   </div>
@@ -229,6 +231,7 @@ const Credit_Card = () => {
                       id="email"
                       name="email"
                       placeholder=""
+                      onChange={()=>validate(3)}
                       onblur={()=>validate(3)}
                     />
                   </div>
@@ -243,6 +246,7 @@ const Credit_Card = () => {
                       id="mob"
                       name="mob"
                       placeholder=""
+                      onChange={()=>validate(4)}
                       onblur={()=>validate(4)}
                     />
                   </div>
@@ -257,6 +261,7 @@ const Credit_Card = () => {
                       id="job"
                       name="job"
                       placeholder=""
+                      onChange={()=>validate(5)}
                       onblur={()=>validate(5)}
                     />
                   </div>
@@ -269,6 +274,7 @@ const Credit_Card = () => {
                       id="mob"
                       name="mob"
                       placeholder=""
+                      onChange={()=>validate(4)}
                       onblur={()=>validate(4)}
                     />
                   </div>
@@ -286,18 +292,20 @@ const Credit_Card = () => {
                       name="ans"
                       placeholder=""
                       onblur={()=>validate(6)}
+                      onChange={()=>validate(6)}
                     />
                   </div>
                 </div>
-                <div class="row justify-content-end">
-                  <div class="form-group col-sm-6">
-                    <button type="submit" class="btn-block btn-primary">
+               
+                    <button  class="col-sm-6 btn-primary"
+                    onClick={()=>{
+                      if(validate(6)&&validate(5)&&validate(4)&&validate(3)&&validate(2)&&validate(1))
+                      {alert("Your application has been submitted successfully");setView("BeginView")}
+                    }}
+                    >
                       Apply
                     </button>
-                  </div>
-                </div>
-              </form>
-            </div>
+                              </div>
           </div>
         </div>
       </div>
