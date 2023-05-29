@@ -2,27 +2,10 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 const BeginView = ({ setView }) => {
 
-  useEffect(() => {
-    const msg = new SpeechSynthesisUtterance()
-    msg.text = "Enter Space if you want to turn on Blind mode"
-    window.speechSynthesis.speak(msg)
-  }, []);
-
-  let handleAnswerChange = (event) => {
-    if (event.key === ' ') {
-      setView("Speach")
-    }
-  }
+  
 
   return (
     <div  >
-
-      <div>
-        <input
-          class="position-absolute"
-          style={{ width: "5%", height: "1%", top: "-170px", right: "150px" }}
-          autoFocus type="text" onKeyPress={handleAnswerChange} onChange={handleAnswerChange} />
-      </div>
 
 
       <img class="position-absolute"
@@ -47,9 +30,9 @@ const BeginView = ({ setView }) => {
 
 
       <button type="button" class="btn btn-primary btn-lg position-absolute"
-        style={{ left: "50px", top: "450px " }} onClick={()=>{setView("Open_bank_account")}}>Open Account</button>
+        style={{ left: "50px", top: "450px " }} onClick={() => { setView("Open_bank_account") }}>Open Account</button>
       <button type="button" class="btn btn-outline-dark btn-lg position-absolute"
-        style={{ left: "250px", top: "450px " }} onClick={()=>{setView("CloseAccount")}}>Close accounts</button>
+        style={{ left: "250px", top: "450px " }} onClick={() => { setView("CloseAccount") }}>Close accounts</button>
 
 
       <div className='position-absolute' style={{ left: "50px", top: "520px " }}>

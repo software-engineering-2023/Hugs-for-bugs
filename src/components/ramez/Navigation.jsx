@@ -29,7 +29,7 @@ const Navigation = ({ setView }) => {
                         Home</text>
 
 
-                    <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "510px" }}>
+                    <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "420px" }}>
                         <button class="btn btn-secondary dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Transactions
                         </button>
@@ -38,7 +38,7 @@ const Navigation = ({ setView }) => {
                             <li onClick={() => setView("View_credit_card_transactions")}><a class="dropdown-item text-black" href="#">View credit card transactions</a></li>
                         </ul>
                     </div>
-                    <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "720px" }}>
+                    <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "620px" }}>
                         <button class="btn btn-secondary dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Apply
                         </button>
@@ -52,7 +52,7 @@ const Navigation = ({ setView }) => {
                             ><a class="dropdown-item text-black" href="#">Apply for a loan</a></li>
                         </ul>
                     </div>
-                    <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "910px" }}>
+                    <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "750px" }}>
                         <button class="btn btn-secondary dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Bills
                         </button>
@@ -67,7 +67,7 @@ const Navigation = ({ setView }) => {
                         </ul>
                     </div>
 
-                    <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "1110px" }}>
+                    <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "880px" }}>
                         <button class="btn btn-secondary dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Report
                         </button>
@@ -79,9 +79,18 @@ const Navigation = ({ setView }) => {
                         </ul>
                     </div>
 
-                    <li onClick={() => setView("ViewPoints")} 
-                    style={{ top: "0px", right: "1110px" }}
-                    ><a class="dropdown-item text-black" href="#">View Points</a></li>
+
+
+                    <div className="dropdown position-absolute  text-white" style={{ top: "20px", right: "1050px" }}>
+                        <button class="btn btn-secondary dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ViewPoints
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li onClick={() => setView("ViewPoints")}
+                            ><a class="dropdown-item text-black" href="#">View Points</a></li>
+                        </ul>
+                    </div>
+
 
 
 

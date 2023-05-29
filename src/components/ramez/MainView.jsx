@@ -25,10 +25,28 @@ import BeginNavigation from './BeginNavigation';
 const MainView = () => {
 
   let [view, setView] = useState("Login");
+  useEffect(() => {
+    const msg = new SpeechSynthesisUtterance()
+    msg.text = "Enter Space if you want to turn on Blind mode"
+    window.speechSynthesis.speak(msg)
+  }, []);
+
+  let handleAnswerChange = (event) => {
+    if (event.key === ' ') {
+      setView("Speach")
+    }
+  }
   return (
     <>
+      <div>
+        <input
+          class="position-absolute"
+          style={{ width: "5%", height: "1%", top: "-170px", right: "150px" }}
+          autoFocus type="text" onKeyPress={handleAnswerChange} onChange={handleAnswerChange} />
+      </div>
+      
       <BeginNavigation setView={setView} />
-      {view === "Login" ? <Login setView={setView}/> : null}
+      {view === "Login" ? <Login setView={setView} /> : null}
       {view === "SignUp" ? <SignUp /> : null}
     </>
   )
