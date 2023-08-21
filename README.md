@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Online Banking System Prototype
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a front-end prototype for an online banking system. The prototype is built using HTML, CSS, and JavaScript to simulate the user experience of various stakeholders: Client (bank customer), Admin (technical administrator), and Banker (non-technical staff).
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To explore the prototype, follow these steps:
 
-### `npm start`
+1. Clone the repository to your local machine or download the ZIP archive.
+2. Navigate to the `src` folder.
+3. Locate the `login.html` file.
+4. Open the `login.html` file using a live server extension in your preferred web browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Journeys Covered
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The prototype covers the following key user journeys for different stakeholders:
 
-### `npm test`
+1. Register to use the web application (user may already have a bank account).
+2. Open/close a bank account.
+3. Apply for a credit card.
+4. Apply for a loan (personal or car).
+5. View bank account transactions.
+6. View credit card transactions.
+7. View credit card points and redeem them for cashback.
+8. Pay for credit card bill partially or fully.
+9. Transfer money to other bank accounts (internal/domestic/international).
+10. Set and receive reminders for payments due for bills.
+11. Receive reminders for payments due for loans/credit card bills.
+12. Pay bills using third-party apps or through the bank.
+13. Report technical issues with the system.
+14. Receive notifications about issue resolution and bank announcements.
+15. Report credit card theft/loss/damage and apply for replacement.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Stakeholders
 
-### `npm run build`
+1. **Client (Bank Customer)**: The main user of the online banking system. They can perform banking transactions, manage accounts, and make payments.
+2. **Admin (Technical Administrator)**: Responsible for managing technical aspects of the bank's online system, including issue resolution and system maintenance.
+3. **Banker (Non-Technical Staff)**: Handles non-technical tasks related to the bank, such as assisting clients with account management and financial services.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Note
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This is a front-end prototype and uses dummy data to simulate interactions. It does not have real database integration or backend functionality. The purpose of this prototype is to demonstrate the user journeys and interactions for different stakeholders.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Feel free to explore and interact with the prototype to understand the user experience from different perspectives.
 
-### `npm run eject`
+For any questions or feedback, please contact [your contact information here].
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Disclaimer**: This is a prototype and does not represent an actual functioning online banking system. No real transactions or sensitive data are involved. Use for educational and demonstration purposes only.
